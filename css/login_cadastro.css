@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(218,234,188);
+    background: linear-gradient(180deg, rgba(218,234,188,1) 0%, rgba(156,98,73,1) 98%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
