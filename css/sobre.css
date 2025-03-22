@@ -11,7 +11,7 @@ body {
 }
 
 nav {
-    width: 925px;
+    width: 55%;
     height: 70px; 
     background-color: #9C6249; 
     position: absolute;
@@ -29,7 +29,7 @@ ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 15%;
+    justify-content: space-evenly;
 }
 
 li {
@@ -40,7 +40,7 @@ li a {
     display: block;
     color: #F0F3D9;
     text-align: center;
-    padding:40px 20px;
+    padding: 1.2rem 3rem;
     text-decoration: none;
     font-family: "Jersey 10", sans-serif;
     font-size: 2.5em;
