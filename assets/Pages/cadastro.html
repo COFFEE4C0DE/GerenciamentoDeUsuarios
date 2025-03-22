@@ -3,17 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="/css/login_cadastro.css">
-    <title>Cadastro</title>
+    <link rel="stylesheet" href="../../css/login_cadastro.css">
+    <title>Faça Login</title>
+    <script>
+        function mudarcpf(){
+            document.getElementById("mudar").placeholder="Insira o seu CPF"
+        }
+        function mudarcnpj(){
+            document.getElementById("mudar").placeholder="Insira o seu CNPJ"
+        }
+    </script>
 </head>
 <body>
+    <a href="/index.html">
+        <img class="botao-sair"src="../Images/sair-marrom.png">
+    </a>
     <header>
-        <ul>
-            <li>
-                <a href="/index.html">SAIR</a>
-            </li>
-        </ul>
+
     </header>
+    <main>
+        <div class="texto-login">
+            <h1>Cadastro</h1>
+        </div>
+
+        <form action="" method="post" class="cadastro_form">
+            <div class="campo-input">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" placeholder="Insira o seu nome completo"/>
+            </div>
+            <div class="cpf_cnpj">
+                <input type="radio" id="cpf" name="CNPJ_CPF" value="CPF" onclick="mudarcpf()">
+                <label for="cpf">CPF</label><br>
+                <input type="radio" id="cnpj" name="CNPJ_CPF" value="CNPJ" onclick="mudarcnpj()">
+                <label for="cnpj">CNPJ</label><br>
+            </div>
+            <input type="number" id="mudar">
+            <div class="campo-input">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Insira o seu email"/>
+            </div>
+            <div class="campo-input">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Insira sua senha"/>
+            </div>
+            <div class="campo-input">
+                <label for="data">Data de Nascimento</label>
+                <input type="date" id="data"/>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="termos" name="termos" value="termo">
+                <label for="termos" class="termotermo">Eu aceito que meus dados sejam armazenados e utilizados.</label><br>
+            </div>
+            <button>Entrar</button>
+        </form>
+    </main>
 </body>
 </html>
