@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="/css/login_cadastro.css">
+    <link rel="stylesheet" href="../../css/login_cadastro.css">
     <title>Faça Login</title>
 </head>
 <body>
+    <a href="/index.html">
+        <img class="botao-sair"src="../Images/sair-marrom.png">
+    </a>
     <header>
-            <ul>
-                <li>
-                    <a href="/index.html">SAIR</a>
-                </li>
-            </ul>
+
     </header>
+    <main>
+        <div class="texto-login">
+            <h1>Login</h1>
+        </div>
+
+        <form action="" method="post" class="login_form">
+            <div class="campo-input">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" placeholder="Insira o seu nome completo"/>
+            </div>
+            <div class="campo-input">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Insira sua senha"/>
+            </div>
+            <button>Entrar</button>
+        </form>
+    </main>
 </body>
 </html>
