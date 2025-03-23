@@ -1,24 +1,40 @@
+@charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
 body {
     background: rgb(218,234,188);
     background: linear-gradient(180deg, rgba(218,234,188,1) 0%, rgba(156,98,73,1) 98%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
     height: 100vh;
     font-family: 'Jersey 10';
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 .botao-sair{
-    width: 50px;
-    position: fixed;
+    width: 100px;
+    position: absolute;
     left: 0pt;
     top: 0pt;
     padding: 20px;
+}
+
+h1{
+    top: 30px;
+    color:rgba(240, 243, 217, 1);
+    padding: 4px 60px;
+    font-size: 4em;
+    z-index: 1;    
+    box-shadow: 0px 6px 7px #9c62495c;
+    position: relative;
+    background-color: rgba(169, 187, 136, 1);
+    border-radius: 10px;
+    letter-spacing: 4px;
+}
+
+.campo-input, .cpf_cnpj{
+    width: 65%;
 }
 
 input{
@@ -26,24 +42,37 @@ input{
     font-family: 'Jersey 10';
     border: none;
     border-radius: 9px;
-    width: 300px;
-    height: 35px;
+    width: 100%;
+    height: 50px;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    text-indent: 20px;
+    font-size: 1.9em;
+    color: #9C6249;
 }
 
-input::placeholder{
-    color: rgba(156, 98, 73, 0.6);
-    font-size: 1.1rem;
+input[type="radio"]:focus, input[type='checkbox']:focus{
+    border: 0;
+}
+
+input:focus{
+    border: 3px solid #9C6249;
+    outline: none; /* Optional: Removes the default browser outline */
+}
+
+label{
+    color:rgba(156, 98, 73, 1);
+    font-size: 1.8em;
     padding-left: 10px;
+}
+
+input::placeholder, input[type="date"]::placeholder{
+    color: rgba(156, 98, 73, 0.6);
 }
 
 input[type="date"]{
-    color: rgba(156, 98, 73, 0.6);
-    font-size: 1.1rem;
-    padding-left: 10px;
-    padding-top: 10px;
+    display: block;
 }
 
 input[type="date"]::-webkit-inner-spin-button,
@@ -52,52 +81,39 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
 }
 
-.texto-login{
-    color:rgba(240, 243, 217, 1);
-    background-color: rgba(169, 187, 136, 1);
-    border-radius: 10px;
-    width: 150px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 40;    
-}
-
-label{
-    color:rgba(156, 98, 73, 1);
-    font-size: 1.3rem;
-    padding-left: 10px;
-}
-
 button{
     background-color: rgba(156, 98, 73, 1);
-    width: 150px;
-    height: 40px;
+    width: 200px;
+    height: 50px;
     border: none;
     border-radius: 10px;
     font-family: 'Jersey 10';
     color: rgba(240, 243, 217, 1);
-    font-size: 1.3rem;
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0px 0px 5px #8d2a00;
 }
 
 .login_form{
     background-color: rgba(240, 243, 217, 1);
-    width: 500px;
-    height: 300px;
+    width: 90%;
+    padding: 90px 60px 50px 50px;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 50px;
     border-radius: 13px;
-    justify-items: center;
     align-items: center;
-    justify-content: center;
 }
 
 .cadastro_form{
     background-color: rgba(240, 243, 217, 1);
-    width: 500px;
-    height: 600px;
+    width: 90%;
+    padding: 90px 60px 50px 50px;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -109,9 +125,9 @@ button{
 
 input[type='checkbox'] {
     appearance: none;
-    height: 1.5em;
+    height: 1.2em;
     position: relative;
-    width: 1.5em;
+    width: 1.2em;
 }
 
 input[type='checkbox']::after, input[type='checkbox']::before {
@@ -155,13 +171,15 @@ input[type='checkbox']:checked::before {
 }
 
 .termotermo{
-    font-size: 0.8rem;
+    font-size: 1.1em;
 }
+
 input[type='radio'] {
     appearance: none;
-    height: 1.5em;
+    height: 1.2em;
     position: relative;
-    width: 1.5em;
+    width: 1.2em;
+    border-radius: 50%;
 }
 
 input[type='radio']::after, input[type='radio']::before {
@@ -199,6 +217,21 @@ input[type='radio']:checked::before {
 
 .cpf_cnpj{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.cpf_cnpj > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+
+.cpf_cnpj > div > div{
+    display: flex; 
     align-items: center;
 }

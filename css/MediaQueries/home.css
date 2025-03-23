@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+@media screen and (max-width: 1260px) {
+    .conteudo-central-esquerda{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .conteudo-central{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .conteudo-central-esquerda{
+        width: 100%;
+        padding: 10px;
+        border-radius: 0;
+
+    }
+
+    .conteudo-central-esquerda p{
+        font-size: 1.1em;
+    }
+
+    .conteudo-central-esquerda h1{
+        font-size: 3em;
+    }
+
+    .conteudo-central-direita{
+        height: 100%;
+    }
+
+    .conteudo-direita{
+        flex-direction: row;
+        gap: 20px;
+    }
+}
