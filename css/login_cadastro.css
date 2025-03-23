@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 body {
     background: rgb(218,234,188);
     background: linear-gradient(180deg, rgba(218,234,188,1) 0%, rgba(156,98,73,1) 98%);
@@ -5,4 +6,199 @@ body {
     background-size: cover;
     margin: 0;
     height: 100vh;
+    font-family: 'Jersey 10';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.botao-sair{
+    width: 50px;
+    position: fixed;
+    left: 0pt;
+    top: 0pt;
+    padding: 20px;
+}
+
+input{
+    background-color: rgba(156, 98, 73, 0.17);
+    font-family: 'Jersey 10';
+    border: none;
+    border-radius: 9px;
+    width: 300px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input::placeholder{
+    color: rgba(156, 98, 73, 0.6);
+    font-size: 1.1rem;
+    padding-left: 10px;
+}
+
+input[type="date"]{
+    color: rgba(156, 98, 73, 0.6);
+    font-size: 1.1rem;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.texto-login{
+    color:rgba(240, 243, 217, 1);
+    background-color: rgba(169, 187, 136, 1);
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 40;    
+}
+
+label{
+    color:rgba(156, 98, 73, 1);
+    font-size: 1.3rem;
+    padding-left: 10px;
+}
+
+button{
+    background-color: rgba(156, 98, 73, 1);
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Jersey 10';
+    color: rgba(240, 243, 217, 1);
+    font-size: 1.3rem;
+}
+
+.login_form{
+    background-color: rgba(240, 243, 217, 1);
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 13px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro_form{
+    background-color: rgba(240, 243, 217, 1);
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-radius: 13px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type='checkbox'] {
+    appearance: none;
+    height: 1.5em;
+    position: relative;
+    width: 1.5em;
+}
+
+input[type='checkbox']::after, input[type='checkbox']::before {
+    box-sizing: border-box;
+    position: absolute;
+}
+      
+input[type='checkbox']::after {
+    border-bottom: 3px solid #FFFFFF;
+    border-right: 3px solid #FFFFFF;
+    content: '';
+    height: 75%;
+    left: 50%;
+    top: 50%;
+    transform: scale(0.1) translate(-50%, -50%);
+    transition: transform 0.2s;
+    width: 40%;
+}
+      
+input[type='checkbox']::before {
+    border: 3px solid rgba(156, 98, 73, 1);
+    border-radius: 0.25em;
+    content: '';
+    height: 100%;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+input[type='checkbox']:checked::after {
+    transform: rotate(35deg) scale(1) translate(-100%, -30%);
+}
+      
+input[type='checkbox']:checked::before {
+    background-color: rgba(169, 187, 136, 1);
+}
+
+.checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.termotermo{
+    font-size: 0.8rem;
+}
+input[type='radio'] {
+    appearance: none;
+    height: 1.5em;
+    position: relative;
+    width: 1.5em;
+}
+
+input[type='radio']::after, input[type='radio']::before {
+    box-sizing: border-box;
+    position: absolute;
+}
+      
+input[type='radio']::after {
+    border-bottom: 3px solid #FFFFFF;
+    border-right: 3px solid #FFFFFF;
+    height: 75%;
+    left: 50%;
+    top: 50%;
+    transform: scale(0.1) translate(-50%, -50%);
+    transition: transform 0.2s;
+    width: 40%;
+}
+      
+input[type='radio']::before {
+    border: 3px solid rgba(156, 98, 73, 1);
+    border-radius: 2em;
+    content: '';
+    height: 100%;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+input[type='radio']:checked::after {
+    transform: rotate(35deg) scale(1) translate(-100%, -30%);
+}
+      
+input[type='radio']:checked::before {
+    background-color: rgba(169, 187, 136, 1);
+}
+
+.cpf_cnpj{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
