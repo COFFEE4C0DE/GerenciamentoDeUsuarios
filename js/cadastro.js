@@ -42,7 +42,7 @@ async function enviarDados(data){
         window.location.href = "./login.html";
     }else{
         estadoBotao = statusBotao(estadoBotao);
-        alert($`Falha ao realizar login. HTTP ERROR: ${response.status}`);
+        alert(`Falha ao realizar login. HTTP ERROR: ${response.status}`);
     }
 };
 

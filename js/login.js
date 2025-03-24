@@ -28,9 +28,10 @@ async function enviarDados(data){
     if(response.ok){
         alert("Login realizado com sucesso!")
         window.location.href = "./home.html";
+        return;
     }else{
         estadoBotao = statusBotao(estadoBotao);
-        alert($`Falha ao realizar login. HTTP ERROR: ${response.status}`);
+        alert(`Falha ao realizar login. HTTP ERROR: ${response.status}`);
     }
 }
 
