@@ -1,21 +1,27 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Monomaniac+One&family=Syne:wght@400..800&display=swap');
 
 body {
     background-color: #9C6249;
 }
 
-nav {
-    width: 30%;
-    height: 70px; 
-    background-color: #E2DAC0; 
-    position: absolute;
-    top: 20px; 
-    right: 5%; 
+nav{
+    background-color: #9C6249;
+    width: 700px;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    border-radius: 20px 20px;
-    
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 30px 40px;
+    border-radius: 10px;
+}
+
+nav > a{
+    color: #F0F3D9;
+    text-decoration: none;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 2em;
 }
 
 ul {
