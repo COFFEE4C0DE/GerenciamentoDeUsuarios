@@ -32,3 +32,18 @@ nav > a{
     letter-spacing: 1px;
     font-size: 18px;
 }
+h1{
+    text-align: center;
+    color: #5E3726;
+    font-family: "Abhaya Libre", serif;
+    font-size: 55px;
+    font-weight: 100;
+    line-height: 159px;
+    letter-spacing: 10px;
+}
+p{
+    text-align: center;
+    font-family: "Abhaya Libre", serif;
+    color: #5E3726;
+    font-size: 10px;
+}
