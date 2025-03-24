@@ -26,6 +26,8 @@ form.addEventListener('submit', function(event){
 });
 
 async function enviarDados(data){
+    estadoBotao = statusBotao(estadoBotao);
+    console.log('Enviando requisição...');
     let jsonData = JSON.stringify(data);
     let url = "https://go-wash-api.onrender.com/api/user";
     let response =  await fetch(url, {
@@ -35,24 +37,27 @@ async function enviarDados(data){
     });
 
     if(response.ok){
-        estadoBotao = statusBotao(estadoBotao);
         let result = await response.json()
-        alert("Cadastro realizado com sucesso!")
+        alert("Cadastro realizado com sucesso!.\nAtive sua conta via email!")
         window.location.href = "./login.html";
     }else{
         estadoBotao = statusBotao(estadoBotao);
-        console.log(response.status);
+        alert($`Falha ao realizar login. HTTP ERROR: ${response.status}`);
     }
 };
 
 function statusBotao(estado){
-    let botao = window.document.querySelector('#botaozinho');
+    let botao = document.querySelector('#botaozinho');
+    let load = window.document.querySelector('.loader');
 
     if(estado){
-        botao.setAttribute("disabled", "disabled");
+        console.log(botao)
+        botao.style.display = "none";
+        load.style.display = "block";
         return false;
     } else {
-        botao.removeAttribute("disabled");
+        botao.style.display = "block";
+        load.style.display = "none";
         return true;
     }
 
