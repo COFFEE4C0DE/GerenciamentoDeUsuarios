@@ -1,22 +1,48 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Monomaniac+One&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Monomaniac+One&display=swap');
 
-body {
+*{
+    font-family: 'Monomaniac One';
+}
+
+.botao-sair{
+    width: 100px;
+    position: absolute;
+    left: 0pt;
+    top: 0pt;
+    padding: 20px;
+}
+
+body{
+    height: 100vh;
     background-color: #9C6249;
+    background-image: url(../assets/Images/FundoAlmiscarado.png);
+    background-position: top left;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
 }
 
 nav{
-    background-color: #9C6249;
-    width: 700px;
+    background-color: #E2DAC0;
+    width: 50%;
+    max-width: 700px;
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
     margin: 30px 40px;
     border-radius: 10px;
+    align-self: flex-end;
 }
 
 nav > a{
-    color: #F0F3D9;
+    color: #9C6249;
     text-decoration: none;
     font-family: "Jersey 10", sans-serif;
     font-weight: 500;
@@ -24,28 +50,123 @@ nav > a{
     font-size: 2em;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+aside{
+    width: 100%;
     display: flex;
-    gap: 15%;
+    justify-content: space-between;
+    padding: 50px;
 }
 
-li {
-    display: inline-block;
-}
-
-li a {
+aside > h2{
     display: block;
-    color: #9C6249;
-    text-align: center;
-    padding: 1.2rem 2rem;
-    text-decoration: none;
-    font-family: "Jersey 10", sans-serif;
-    font-size: 2.5em;
+    color: #E2DAC0;
+    background-color: #5E3726;
+    padding: 10px 80px;
+    border-radius: 15px;
+    font-family: 'Jersey 10', 'Monomaniac One', 'sans-sefif';
+    font-size: 2.1em;
+    letter-spacing: 3px;
+    font-weight: 100;
 }
 
-li a:hover {
-    color: #d8b4a4;
+aside > h2::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-image: url(../assets/Images/canecaegraos.png);
+    background-position: center;
+    background-size: contain;
+    transform: translate(175px, -58px);
+}
+
+aside input[type='search']{
+    display: block;
+    padding: 0px 0px 0px 60px;
+    width: 300px;
+    height: 50px;
+    color: #5E3726;
+    background-color: #F0F3D9;
+    font-size: 1.7em;
+    border-radius: 15px;
+    border: none;
+}
+
+aside > div::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background-image: url(../assets/Images/pesquisa.png);
+    background-position: center;
+    background-size: contain;
+    transform: translate(7px, 3px);
+}
+
+main{
+    height: 100%;
+    margin: 30px 0;
+}
+
+.endereco{
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #E2DAC0;
+    border-radius: 0 0 15px 15px;
+}
+
+.endereco button{
+    position: absolute;
+    height: 30px;
+    padding: 0 10px;
+    color: #E2DAC0;
+    font-size: 1em;
+    letter-spacing: 3px;
+    background-color: #5E3726;
+    border-radius: 15px 15px 0 0;
+    transform: translateY(-40px);
+    border: none;
+    cursor: pointer;
+    left: 5%;
+}
+
+.endereco button:last-of-type{
+    transform: translate(100px, -40px);
+}
+
+.endereco button:hover{
+    background-color: #9C6249;
+}
+
+.endereco > div{
+    width: 30%;
+}
+
+.endereco .campo h3{
+    color: #9C6249;
+    letter-spacing: 3px;
+}
+
+.endereco .campo p{
+    background-color: #fff;
+    width: 100%;
+    min-height: 35px;
+    padding: 5px;
+    font-size: 1.3em;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+footer{
+    background-color: #9c624973;
+    text-align: center;
+    font-size: 1.2em;
+    color: #F0F3D9;
 }
