@@ -80,7 +80,8 @@ main {
     background-color: #F0F3D9;
     width: 65%;
     max-width: 1050px;
-    height: 65vh;
+    min-height: 65vh;
+    margin-bottom: 30px;
     border-radius: 20px 20px;
     border: 7px solid #9C6249; 
 }
