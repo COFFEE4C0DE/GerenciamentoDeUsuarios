@@ -3,24 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="/css/endereco.css">
-    <title>Visualizar Endereços</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/endereco.css">
+    <title>Endereços</title>
 </head>
 <body>
-    <header>
+    <header>      
         <nav>
-            <ul>
-                <li>
-                    <a href="home.html">HOME</a>
-                </li>
-                <li>
-                    <a href="sobre.html">SOBRE</a>
-                </li>
-
-            </ul>
+            <a href="./home.html">HOME</a>
+            <a href="./sobre.html">SOBRE</a>
         </nav>
-        
+        <aside>
+            <h2>ENDEREÇOS</h2>
+            <div><input type="search" name="Pesquisa" id="IPesquisa"></div>
+        </aside>
     </header>
+    <a href="../../index.html">
+        <img class="botao-sair" src="../Images/sair-branco.png">
+    </a>
+    <main> 
+        <div class="endereco">
+            <button>EDITAR</button>
+            <button>EXCLUIR</button>
+            <div class="campos">
+                <div class="campo">
+                    <h3>Título:</h3>
+                    <p></p>
+                </div>
+                <div class="campo">
+                    <h3>Cep:</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="campos">
+                <div class="campo">
+                    <h3>Número:</h3>
+                    <p></p>
+                </div>
+                <div class="campo">
+                    <h3>Complemento:</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="campo">
+                <h3>Endereço:</h3>
+                <p></p>
+            </div>
+        </div>
+    </main>
+    <footer>&copy; COFFEE4C0DE - Todos os direitos reservados. </footer>
 </body>
 </html>
