@@ -22,7 +22,7 @@ header{
 }
 nav{
     background-color: #9C6249;
-    width: 500px;
+    width: 700px;
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
@@ -33,10 +33,10 @@ nav{
 nav > a{
     color: #F0F3D9;
     text-decoration: none;
-    font-family: "Monomaniac One", sans-serif;
-    font-weight: 400;
-    letter-spacing: 1px;
-    font-size: 18px;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 2em;
 }
 #tituloPrincipal{
     padding: 30px 40px;
