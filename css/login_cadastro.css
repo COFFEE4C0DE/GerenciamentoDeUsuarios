@@ -4,7 +4,7 @@
 body {
     background: rgb(218,234,188);
     background: linear-gradient(180deg, rgba(218,234,188,1) 0%, rgba(156,98,73,1) 98%);
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Jersey 10';
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ body {
 }
 
 h1{
-    top: 30px;
+    top: 70px;
     color:rgba(240, 243, 217, 1);
     padding: 4px 60px;
     font-size: 4em;
@@ -34,7 +34,8 @@ h1{
 }
 
 .campo-input, .cpf_cnpj{
-    width: 65%;
+    width: 100%;
+    max-width: 700px;
 }
 
 input{
@@ -42,7 +43,7 @@ input{
     font-family: 'Jersey 10';
     border: none;
     border-radius: 9px;
-    width: 100%;
+    width: ;
     height: 50px;
     display: flex;
     flex-direction: column;
@@ -100,7 +101,7 @@ input[type="submit"]:hover{
 
 .login_form{
     background-color: rgba(240, 243, 217, 1);
-    width: 90%;
+    width: 75%;
     padding: 90px 60px 50px 50px;
     max-width: 900px;
     display: flex;
@@ -108,11 +109,12 @@ input[type="submit"]:hover{
     gap: 50px;
     border-radius: 13px;
     align-items: center;
+    margin: 30px 0;
 }
 
 .cadastro_form{
     background-color: rgba(240, 243, 217, 1);
-    width: 90%;
+    width: 75%;
     padding: 90px 60px 50px 50px;
     max-width: 900px;
     display: flex;
@@ -122,6 +124,7 @@ input[type="submit"]:hover{
     justify-items: center;
     align-items: center;
     justify-content: center;
+    margin: 30px 0;
 }
 
 input[type='checkbox'] {
