@@ -8,7 +8,13 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
-
+.botao-sair{
+    width: 100px;
+    position: absolute;
+    left: 0pt;
+    top: 0pt;
+    padding: 20px;
+}
 header{
     display: flex;
     flex-direction: row;
@@ -32,11 +38,14 @@ nav > a{
     letter-spacing: 1px;
     font-size: 18px;
 }
-h1{
+#tituloPrincipal{
+    padding: 30px 40px;
+}
+h1,h2{
     text-align: center;
     color: #5E3726;
     font-family: "Abhaya Libre", serif;
-    font-size: 55px;
+    font-size: 60px;
     font-weight: 100;
     line-height: 159px;
     letter-spacing: 10px;
@@ -45,5 +54,89 @@ p{
     text-align: center;
     font-family: "Abhaya Libre", serif;
     color: #5E3726;
-    font-size: 10px;
+    font-size: 38px;
+}
+#iconesgif{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#giticon{
+    width: 100px;
+}
+#iconesgif > a{
+    text-decoration: none;
+    font-size: 3em;
+    font-family: "Monomaniac One", sans-serif;
+    color: #E79E36;
+    display: flex;    
+    align-items: center;
+    gap: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 70px;
+}
+#iconesgif > img{
+    width: 300px;
+}
+#equipe{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    max-width: 700px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.membro{
+    width: 200px;
+}
+.membro > img{
+    width: 100%;
+    background-color: #00000076;
+    display: block;
+    border-radius: 50%;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+.membro > h3{
+    color: #F0F3D9;
+    width: 100%;
+    text-align: center;
+    background-color: #A9BB88;
+    padding: 5px 10px;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 100;
+    letter-spacing: 4px;
+}
+.membro > h3:after{
+    content: "";
+    background-image:url(../assets/Images/graos.png);
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    transform: translate(161px, -58px);
+}
+.marrom{
+    background-color: #9C6249 !important;
+}
+.links img{
+    width: 45px;
+}
+.links{
+    text-align: right;
+}
+footer{
+    background-color: #9C6249;
+    height: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Monomaniac One", sans-serif;
 }
