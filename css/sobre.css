@@ -7,7 +7,35 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-x: hidden;
 }
+
+body::after{
+    content: "";
+    background: url(../assets/Images/grao.png) center center no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    right: -20%;
+    top: -20%;
+    z-index: -1;
+    position: fixed;
+}
+
+body::before{
+    content: "";
+    background: url(../assets/Images/grao.png) center center no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    left: -20%;
+    bottom: -20%;
+    z-index: -1;
+    position: fixed;
+}
+
 .botao-sair{
     width: 100px;
     position: absolute;
