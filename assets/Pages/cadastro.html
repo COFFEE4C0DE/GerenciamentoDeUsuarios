@@ -28,15 +28,15 @@
                     <label for="cnpj">CNPJ</label>
                 </div>
             </div>
-            <input type="text" maxlength="14" placeholder="Insira o seu CPF" required id="mudar">
+            <input type="text" minlength="11" maxlength="14" placeholder="Insira o seu CPF" required id="mudar">
         </div>
         <div class="campo-input">
             <label for="email">Email</label>
-            <input maxlength="255" type="email" id="email" placeholder="Insira o seu email" required/>
+            <input minlength="5" maxlength="255" type="email" id="email" placeholder="Insira o seu email" required/>
         </div>
         <div class="campo-input">
             <label for="password">Senha</label>
-            <input type="password" maxlength="255" id="password" placeholder="Insira sua senha" required/>
+            <input type="password" minlength="8" maxlength="255" id="password" placeholder="Insira sua senha" required/>
         </div>
         <div class="campo-input">
             <label for="data">Data de Nascimento</label>

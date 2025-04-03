@@ -3,8 +3,9 @@
 
 body{
     height: 100vh;
-    background-color: #eedfd5;
-    /* background-image: linear-gradient(180deg, rgba(218,234,188,1) 0%, rgba(156,98,73,1)); */
+    background-color: rgba(240, 243, 217, 1); 
+    /* #eedfd5
+    background-image: linear-gradient(180deg, rgba(218,234,188,1) 0%, rgba(156,98,73,1)); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

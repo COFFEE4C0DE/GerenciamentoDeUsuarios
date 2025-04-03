@@ -31,7 +31,7 @@ async function enviarDados(data){
         return;
     }else{
         estadoBotao = statusBotao(estadoBotao);
-        alert(`Falha ao realizar login. HTTP ERROR: ${response.status}`);
+        alert(`Falha ao realizar o login. ERROR: ${result.data.errors}`);
     }
 }
 

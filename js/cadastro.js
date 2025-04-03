@@ -37,12 +37,13 @@ async function enviarDados(data){
     });
 
     if(response.ok){
-        let result = await response.json()
         alert("Cadastro realizado com sucesso!.\nAtive sua conta via email!")
         window.location.href = "./login.html";
     }else{
+        let result = await response.json()
         estadoBotao = statusBotao(estadoBotao);
-        alert(`Falha ao realizar login. HTTP ERROR: ${response.status}`);
+        console.log(result)
+        // alert(`Falha ao realizar o cadastro. ERROR: ${result.data.errors}`);
     }
 };
 
