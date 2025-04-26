@@ -1,4 +1,5 @@
 const menu_cafe = document.querySelector('a[href^="#menu"]');
+const cafes = document.querySelector('.menu-sec-cafes');
 menu_cafe.addEventListener('click', function(event){
     event.preventDefault();
 
@@ -8,6 +9,7 @@ menu_cafe.addEventListener('click', function(event){
       elemento.scrollIntoView({
         behavior: 'smooth',
         block: 'start' 
+
     });
     
 });
