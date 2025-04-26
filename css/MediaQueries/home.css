@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@media screen and (max-width: 1260px) {
+/*@media screen and (max-width: 1260px) {
     .conteudo-central-esquerda{
         padding: 5px;
     }
@@ -36,4 +36,44 @@
         gap: 20px;
     }
 }
+
+@media (min-width: 1400px) {
+
+    .first-sec {
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 600px){
+    .first-sec {
+        width: 100%;
+        gap: 0px;
+        padding: 0px 40px 0px 0px;
+    }
+    
+
+    .first-sec .first-sec-txt h2 {
+        font-size: 2.3rem;
+        padding-bottom: 0px;
+    }
+    .first-sec .first-sec-txt p{
+        padding: 10px 20px 10px 20px;
+    }
+
+    .second-sec-txt2 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .second-sec::after{
+        width: 450px;
+    }
+}
+
+
+*/
+
+
+  
 
