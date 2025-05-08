@@ -1,4 +1,4 @@
-localStorage.clear()
+localStorage.clear();
 const form = window.document.querySelector('.login_form');
 let estadoBotao = true;
 
