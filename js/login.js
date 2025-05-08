@@ -1,3 +1,4 @@
+localStorage.clear()
 const form = window.document.querySelector('.login_form');
 let estadoBotao = true;
 
@@ -27,12 +28,15 @@ async function enviarDados(data){
 
     if(response.ok){
         alert("Login realizado com sucesso!")
+        let data = await response.json()
+        localStorage.setItem('userdata', JSON.stringify(data))
         window.location.href = "./home.html";
         return;
     }else{
         estadoBotao = statusBotao(estadoBotao);
         alert(`Falha ao realizar o login. ERROR: ${result.data.errors}`);
-    }
+    } 
+      
 }
 
 function statusBotao(estado){
