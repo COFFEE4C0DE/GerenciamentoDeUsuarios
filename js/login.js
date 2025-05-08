@@ -28,7 +28,7 @@ async function enviarDados(data){
 
     if(response.ok){
         alert("Login realizado com sucesso!")
-        let data = await response.json()
+        let data = await response.json();
         localStorage.setItem('userdata', JSON.stringify(data))
         window.location.href = "./home.html";
         return;
