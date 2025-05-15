@@ -120,6 +120,7 @@ main{
     justify-content: space-between;
     background-color: #E2DAC0;
     border-radius: 0 0 15px 15px;
+    margin-top: 50px;
 }
 
 .endereco button{

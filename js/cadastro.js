@@ -42,7 +42,7 @@ async function enviarDados(data){
     }else{
         let result = await response.json()
         estadoBotao = statusBotao(estadoBotao);
-        alert(`Falha ao realizar o cadastro. ERROR: ${result.data.errors}`);
+        alert(`Falha ao realizar o cadastro. ERROR: ${JSON.stringify(result.data.errors)}`);
     }
 };
 
