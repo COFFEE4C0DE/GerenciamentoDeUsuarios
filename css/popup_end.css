@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Monomaniac One';
+    font-family: "Jersey 10", sans-serif;
 }
 
 body{
@@ -17,41 +17,68 @@ body{
 
 .campo{
     color: #9C6249;
+    font-family: 'Monomaniac One';
 }
 
 .popup{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.campos{
     display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px 78px;
+    padding: 20px;
     border-radius: 10px;
     background-color: #DAEABC;
     letter-spacing: 3px;
-    
+    border-color: #5E3726;
+    border-style: solid;   
+    font-size: 15px;
+}
+
+#botao{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 100px;
+    padding: 15px;
 }
  
 #enviar{
     background-color: #B5D676;
     border-radius: 5px;
     color: #FFFFFF;
+    border-style: none;
+    height: 50px;
+    width: 100px;
+    font-size: 18px;
+    letter-spacing: 2px;
 }
 
 #cancelar{
     background-color: #D67676;
     color: #FFFFFF;
     border-radius: 5px;
+    border-style: none;
+    width: 100px;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 
-#botao{
-    display: flex;
-    justify-content: space-between;
+
+
+input{
+    width: 300px;
+    border-radius: 5px;
+    border-style: none;
+    height: 22px;
+    padding: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+
+
+}
+
+#end{
+    height: 100px;
 }
 
