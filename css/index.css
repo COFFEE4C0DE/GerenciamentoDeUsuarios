@@ -6,6 +6,7 @@
 
 *{
     font-family: 'Monomaniac One';
+    box-sizing: border-box;
 }
 
 body {
@@ -14,7 +15,6 @@ body {
     margin: 0;
     min-height: 100vh;
     background-color: #F0D9C4;
-    
 }
 
 header {
@@ -80,32 +80,33 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .first-sec {
-    width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 90px;
-    padding: 0px 90px 0px 100px;
-    height: 86vh;
+    width: 100%;
+    margin: 50px;
+}
+
+.first-sec-img{
+    width: 45%;
 }
 
 .first-sec .first-sec-txt {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 35px;
+    justify-content: space-around;
+    width: 50%;
 }
 
 .first-sec .first-sec-txt h2 {
-    padding-bottom: 20px;
     font-family: "Covered By Your Grace", cursive;
     text-align: center;
     font-size: 4rem;
     color: #704024;
-    
 }
 
 .first-sec .first-sec-txt p {
@@ -124,6 +125,7 @@ main {
     color: #F0D9C4;
     text-decoration: none;
     cursor: pointer;
+    font-size: 2em;
 }
   
 .first-sec-txt a:hover {
@@ -131,15 +133,20 @@ main {
     color: #F0D9C4;
   }
 
+.circle{
+    text-align: center;
+}
+
 .circle img {
-    width: 650px;
+    width: 100%;
+    max-width: 500px;
     transform: rotate(20deg);
 }
 
 .second-sec {
-    width: 65%;
+    width: 80%;
+    max-width: 900px;
     background-color: #704024;
-    height: 50vh;
     color: #F0D9C4;
     margin-bottom: 0px;
     border-radius: 20px;
@@ -147,24 +154,20 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0px 50px 0px 50px;
+    padding: 25px;
     gap: 50px;
-    position: relative;
 }
 
 .second-sec div{
     display: flex;
     align-items: center;
-
     width: 50%;
-    height: 25vh;
 }
 
 .second-sec-txt1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
     text-align: center;
 }
 
@@ -185,59 +188,60 @@ main {
 
 .second-sec::after {
     content: "";
-    background-image: url('../assets/Images/planta-cafe.png');
+    background-image: url(../assets/Images/planta-cafe.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: -90px;
-    right: -390px;
-    width: 580px;
-    height: 580px;
-    z-index: 2;
-}
-
-.second-sec:hover::after {
-    animation: pulse-dois 1s 3;
+    top: 15px;
+    left: 0;
+    transform: rotateY(180deg);
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+    animation: pulse-dois 1s infinite ease-in-out alternate-reverse;
 }
 
 .third-sec {
-    width: 65%;
-    height: 60vh;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    margin: 20px;
 }
 
 .third-sec-txt {
     background-color: #F0F3D9;
     border-radius: 15px;
-    width: 550px;
-    height: 400px;
-
+    width: 100%;
+    max-width: 600px;
     color: #b16133;
     padding: 40px;
     font-size: 2rem;
-    text-align: center;
-
     display: flex;
+    text-align: center;
     align-items: center;
+    justify-content: space-around;
+}
+
+.third-sec-img{
+    text-align: center;
 }
 
 .third-sec-img img {
-    width: 550px;
+    width: 500px;
 }
 
 .fourth-sec {
     background-color: #704024;
     width: 100%;
-    height: 85vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .fourth-sec-img img {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
 }
 
 .fourth-sec-txt {
@@ -245,11 +249,11 @@ main {
     font-size: 3rem;
     text-align: center;
     padding-right: 60px;
+    width: 60%;
 }
 
 #menu {
     width: 100%;
-    height: 135vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -271,14 +275,14 @@ main {
 .menu-sec {
     border: 3px solid #728058;
     border-radius: 15px;
-    width: 60%;
-    height: 120vh;
-
+    width: 90%;
     display: flex;
     align-items: center;
     flex-direction: column;
-
+    margin: 25px;
+    max-width: 1000px;
 }
+
 
 .menu-sec h2 {
     font-family: "Covered By Your Grace", cursive;
@@ -304,24 +308,20 @@ main {
 }
 
 .menu-sec-cafes:hover{
-    animation: pulse 0.5s 1;
+    animation: pulse 0.5s alternate-reverse;
+}
+
+.menu-sec-cafes img{
+    max-width: 200px;
+    width: 30%;
 }
 
 .teste-animacao{
     animation: pulse 0.5s 1;
 }
 
-.menu-sec-cafes p {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: justify;
-}
-
 .notas-cafes {
-    display: flex;
-    justify-content: flex-start;
-
+    display: block;
     margin-top: 10px;
 }
 
@@ -329,10 +329,6 @@ main {
     font-size: 1.6rem;
     color: #728058;
     margin-bottom: 10px;
-}
-
-.menu-sec-cafes img {
-    width: 250px;
 }
 
 footer {
@@ -352,13 +348,10 @@ footer {
   }
 
 @keyframes pulse-dois {
-    0% { transform: rotate(2deg); 
-        animation-timing-function: ease-in-out;
+    0% { 
+        transform: rotateY(180deg); 
     }
-    50% { transform: rotate(10deg); 
-        animation-timing-function: ease-out;
-    }
-    100% { transform: rotate(2deg); 
-        animation-timing-function: ease-in-out;
+    100% { 
+        transform: rotateY(180deg) rotateZ(-10deg); 
     }
 }

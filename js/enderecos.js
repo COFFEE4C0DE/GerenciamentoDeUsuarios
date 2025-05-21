@@ -82,3 +82,30 @@ let dadosUsuarioJSON = localStorage.getItem('userdata');
 let dadosUsuario = JSON.parse(dadosUsuarioJSON);
 
 listarEnderecos(url, dadosUsuario);
+
+async function enviarDados(event){
+    event.preventDefault()        
+    let endereco = {
+        title: document.querySelector('#title').value,
+        cep: document.querySelector('#cep').value,
+        address: document.querySelector('#address').value,
+        number: document.querySelector('#number').value,
+        complement: document.querySelector('#complement').value,
+    }
+
+    let resposta = await fetch(url, {
+        method: 'post',
+        headers: { 
+            Authorization: `Bearer ${dadosUsuario.access_token}`,
+            'Content-Type':'application/json'
+        }, 
+        body: JSON.stringify(endereco)
+    }
+    )
+    if (resposta.ok) {
+        alert('Endereço criado com sucesso!')
+        window.location.reload()
+    } else {
+        alert('Endereço inválido.')
+    }
+}
