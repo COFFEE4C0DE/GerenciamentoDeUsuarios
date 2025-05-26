@@ -110,10 +110,62 @@ main{
     margin: 30px 0;
 }
 
+form {
+    margin: auto;
+    width: 90%;
+    background-color: #E2DAC0;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #E2DAC0;
+    border-radius: 0px 0px 15px 15px;
+    margin-bottom: 1.5rem;
+}
+
+form label {
+    color: #9C6249;
+    letter-spacing: 3px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+form .campo input {
+    background-color: #fff;
+    width: 100%;
+    min-height: 35px;
+    padding: 5px;
+    border-radius: 3px;
+    word-wrap: break-word;
+    border-style: none;
+    font-size: 1.3em;
+}
+
+form .campos {
+    width: 30%;
+}
+
+.campos .button input {
+    height: 30px;
+    padding: 0 20px;
+    color: #E2DAC0;
+    font-size: 1em;
+    letter-spacing: 3px;
+    background-color: #5E3726;
+    border-radius: 15px 15px 15px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.campos .campo {
+    margin-bottom: 10px;
+}
+
 .endereco{
     width: 90%;
     padding: 10px;
-    margin: auto;
+    margin: auto auto 45px auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -170,3 +222,19 @@ footer{
     font-size: 1.2em;
     color: #F0F3D9;
 }
+
+ .adcEndereco{
+    height: 40px;
+    padding: 0 10px;
+    color: #E2DAC0;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 3px;
+    background-color: #5E3726;
+    border-radius: 15px 15px 0 0;
+    width: 215px;
+    transform: translate(-11px, -51px);
+    position: absolute;
+}
+
