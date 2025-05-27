@@ -1,0 +1,123 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Monomaniac+One&display=swap');
+
+.campo{
+    color: #9C6249;
+    font-family: 'Monomaniac One';
+}
+
+.popup{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #DAEABC;
+    letter-spacing: 3px;
+    border-color: #5E3726;
+    border-style: solid;   
+    font-size: 15px;
+    max-height: 600px;
+
+}
+
+.popup > *, input, #end{
+    font-family: "Jersey 10", sans-serif !important;
+}
+
+h3{
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+#botao{
+    display: flex;
+    justify-content: space-between;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 100px;
+    padding: 15px;
+}
+ 
+#enviar{
+    cursor: pointer;
+    background-color: #B5D676;
+    border-radius: 5px;
+    color: #FFFFFF;
+    border-style: none;
+    height: 50px;
+    width: 120px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: "Jersey 10", sans-serif !important;
+
+}
+
+#cancelar{
+    cursor: pointer;
+    background-color: #D67676;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border-style: none;
+    width: 120px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: "Jersey 10", sans-serif !important;
+    transition: 0,3s;
+
+}
+
+input, #end{
+    width: 300px;
+    border-radius: 5px;
+    border-style: none;
+    height: 22px;
+    padding: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    letter-spacing: 3px;
+}
+
+#end{
+    height: 100px;
+    overflow: hidden;
+}
+
+@keyframes popupabrir {
+    from{
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 100;
+    }
+}
+
+#open{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    transition: 0,5s;
+    cursor: pointer;
+
+}
+
+#enviar:hover {
+    background-color: #B5D676;
+    color: #fff;
+    transform: scale(110%);
+
+}
+
+#cancelar:hover {
+    background-color: #D67676;
+    color: #FFFFFF;
+    transform: scale(110%);
+
+}
+
