@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/home.css">
     <link rel="stylesheet" href="../../css/MediaQueries/home.css">
+    <link rel="stylesheet" href="../../css/carousel.css">
     <title>Home</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="../../index.html"><img class="imagem-sair" src="../Images/sair-marrom.png" alt="Seta para voltar para a página inicial."></a>
+            <a href="../../index.html"><img class="imagem-sair" src="../Images/sair-branco.png" alt="Seta para voltar para a página inicial."></a>
             <div class="barra-nav">
                 <ul>
                     <li>
@@ -25,23 +26,58 @@
         </nav>
     </header>
     <main>
-        <div class="conteudo-central">
-            <div class="conteudo-central-esquerda">
-                <h1>SEJA BEM-VIND@</h1>
-                <p>👋 Olá! Seja bem-vind@ à página do GitHub da COFFEE4C0DE!
-                <br>
-                Somos um grupo de estudantes e desenvolvedores movidos por desafios, inovação e, claro, uma boa xícara de café! ❤️☕
-                <br>
-                Nosso propósito é criar projetos que não apenas resolvam problemas desafiadores, mas também despertem nossa criatividade e nos ajudem a evoluir como desenvolvedores. Acreditamos no aprendizado contínuo, na colaboração e no poder do código para transformar ideias em realidade.</p>
-            </div>
-            <div class="conteudo-central-direita">
-                <div class="conteudo-direita">
-                    <img class="conteudo-central-caneca" src="../Images/coffee-home.png" alt="Icone fictício de uma xícara de café quente.">
-                    <p class="quebrar-texto">COFFE<br>4C0DE</p>
+        <div class="barra-lateral">
+            <h2>Café</h2>
+            <p>--------------------------------------------------</p>
+            <p>Nome do Café</p>
+            <p>Nome do Café</p>
+            <p>Nome do Café</p>
+            <h2>Café</h2>
+            <p>--------------------------------------------------</p>
+            <p>Nome do Café</p>
+            <p>Nome do Café</p>
+            <p>Nome do Café</p>
+            <h2>Café</h2>
+            <p>--------------------------------------------------</p>
+            <p>Nome do Café</p>
+            <p>Nome do Café</p>
+            <p>Nome do Café</p>
+
+        </div>
+        <div class="slider-content">
+            <img src="../Images/Seta-esquerda.png" class="prev" onclick="moveSlide(-1)">
+            <div class="slider">
+                <div class="cafe">
+                    <div class="texto-cafe">
+                        <h2>CAFÉ TAL</h2>
+                        <p>Café bom</p>
+                    </div>
+                    <div class="imagem-cafe">
+                        <img id="imagem-slide" src="../Images/SACO-CAFE1.png">
+                    </div>
+                </div>
+                <div class="cafe">
+                    <div class="texto-cafe">
+                        <h2>CAFÉ TAL</h2>
+                        <p>Café bom</p>
+                    </div>
+                    <div class="imagem-cafe">
+                        <img id="imagem-slide" src="../Images/SACO-CAFE4.png">
+                    </div>
+                </div>
+                <div class="cafe">
+                    <div class="texto-cafe">
+                        <h2>CAFÉ TAL</h2>
+                        <p>Café bom</p>
+                    </div>
+                    <div class="imagem-cafe">
+                        <img id="imagem-slide" src="../Images/SACO-CAFE3.png">
+                    </div>
                 </div>
             </div>
+            <img src="../Images/Seta-direita.png" class="next" onclick="moveSlide(1)">
         </div>
     </main>
-    <footer>&copy; COFFEE4C0DE - Todos os direitos reservados. </footer>
+    <script src="../../js/home.js"></script>
 </body>
 </html>
