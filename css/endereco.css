@@ -156,6 +156,8 @@ form .campos {
     border-radius: 15px 15px 15px 15px;
     border: none;
     cursor: pointer;
+    max-width: 300px;
+    width: 100%;
 }
 
 .campos .campo {
@@ -237,4 +239,3 @@ footer{
     transform: translate(-11px, -51px);
     position: absolute;
 }
-
