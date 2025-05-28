@@ -3,37 +3,60 @@
 
 *{
     font-family: 'Monomaniac One';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    margin: 0;
-    height: 100vh;
     background-color: rgb(156, 98, 73);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-/* BARRA DE NAV */
+.barra-lateral{
+    width: 30%;
+    height: 100vh;
+    background-color: rgb(240 217 196);
+    padding: 50px;
+    color: rgb(156 98 73);
+    z-index: 1;
+}
+
+.barra-lateral h2{
+    text-align: center;
+    font-size: 2.3em;
+    text-decoration: underline;
+}
+
+.barra-lateral h3{
+    font-size: 1.3em;
+    color: #728057;
+    font-weight: 900;
+}
+
+.barra-lateral p{
+    font-size: 1.2em;
+    color: #704024;
+}
+
+header{
+    width: 100%;
+}
 
 nav {
     display: flex;
     align-items: center;
-    padding: 30px 50px; 
     flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .barra-nav {
-    width: 500px;
-    height: 75px;
     background-color: #E2DAC0;
-    border-radius: 20px 20px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right:200px ;
+    width: 300px;
 }
 
 .imagem-sair {
@@ -66,25 +89,35 @@ li a {
 }
 
 li a:hover {
-    color: #DAEABC;
+    color: #cf815f;
 }
 
-/* MAIN */
-
 main {
-    width: 100%;
+    width: 70%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider-content{
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
 }
 
 .slider {
+    width: 50%;
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
     align-items: center;
+    gap: 500px;
+    transition: transform 0.5s ease-in-out;
 }
+
 .prev, .next{
     width: 100px;
     height: 100px;
@@ -97,53 +130,24 @@ main {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    padding: 20px 60px;
     flex-direction: column-reverse;
 }
 
-.imagem-cafe, .texto-cafe {
-    flex:1;
-    margin-right: 500px;
-}
 .texto-cafe{
     color: rgb(209 188 163);
+    text-align: center;
 }
+
 .texto-cafe h2{
     font-size: 40px;
     font-family: 'Jersey 10';
     letter-spacing: 7px;
-    margin-top: 30px;
-    margin-bottom: 70px;
 }
+
 .texto-cafe p{
     font-size: 25px;
 }
+
 .imagem-cafe img{
     max-width: 360px;
-}
-.barra-lateral{
-    width: 30%;
-    height: 101vh;
-    position: relative;
-    top: -15%;
-    background-color: rgb(240 217 196);
-    padding: 50px;
-    z-index: 2;
-    color: rgb(156 98 73);
-}
-.next{
-    position: absolute;
-    right: 0;
-    margin-right: 150px;
-}
-.prev{
-    margin-left: 150px;
-}
-.slider-content{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 70%;
-    height: 100%;
-    margin-bottom: 200px;
 }

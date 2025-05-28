@@ -23,26 +23,6 @@ header {
     justify-content: end;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 30px 50px; 
-    
-}
-
-.barra-nav {
-    width: 600px;
-    height: 75px;
-    background-color: #9C6249;
-    border-radius: 20px 20px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
 .imagem-sair {
     width: 60px;
 }

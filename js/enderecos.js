@@ -156,3 +156,11 @@ async function atualizarDados(event){
     }
 
 }
+
+const toggleButton = document.getElementById('toggleButton');
+const formContainer = document.getElementById('formContainer');   
+
+toggleButton.addEventListener('click', function() {
+    console.log(formContainer)
+    formContainer.classList.toggle('show');
+});
