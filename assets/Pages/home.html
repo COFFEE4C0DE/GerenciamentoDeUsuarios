@@ -3,54 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/nav.css">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/home.css">
     <link rel="stylesheet" href="../../css/MediaQueries/home.css">
-    <link rel="stylesheet" href="../../css/carousel.css">
     <title>Home</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="../../index.html"><img class="imagem-sair" src="../Images/sair-branco.png" alt="Seta para voltar para a página inicial."></a>
-            <div class="barra-nav">
-                <ul>
-                    <li>
-                        <a href="enderecos.html">ENDEREÇOS</a>
-                    </li>
-                    <li>
-                        <a href="sobre.html">SOBRE</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <aside class="barra-lateral">
+        <h2>Informações</h2>
+        <h3>Nome:</h3>
+        <p id="nome">Aurora da Serra</p>
+        <h3>Preço:</h3>
+        <p id="preco">R$30</p>
+        <h3>Peso:</h3>
+        <p id="peso">5KG</p>
+        <h3>Tipo:</h3>
+        <p id="tipo">Especial</p>
+        <h3>Descrição:</h3>
+        <p id="descricao">Intenso e marcante, o Aurora da Serra é perfeito pra quem gosta de um café encorpado e com notas profundas. Cultivado nas altitudes mais altas, entrega um sabor achocolatado com toque leve de caramelo queimado. Ideal para começar o dia com força e energia.</p>
+        <h3>Notas Sensoriais:</h3>
+        <p id="notas">Chocolate amargo, caramelo e noz-pecã.</p>
+    </aside>
     <main>
-        <div class="barra-lateral">
-            <h2>Café</h2>
-            <p>--------------------------------------------------</p>
-            <p>Nome do Café</p>
-            <p>Nome do Café</p>
-            <p>Nome do Café</p>
-            <h2>Café</h2>
-            <p>--------------------------------------------------</p>
-            <p>Nome do Café</p>
-            <p>Nome do Café</p>
-            <p>Nome do Café</p>
-            <h2>Café</h2>
-            <p>--------------------------------------------------</p>
-            <p>Nome do Café</p>
-            <p>Nome do Café</p>
-            <p>Nome do Café</p>
-
-        </div>
+        <header>
+            <nav>
+                <a href="../../index.html">
+                    <img class="imagem-sair" src="../Images/sair-branco.png" alt="Seta para voltar para a página inicial.">
+                </a>
+                <div class="barra-nav">
+                    <ul>
+                        <li>
+                            <a href="enderecos.html">ENDEREÇOS</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         <div class="slider-content">
             <img src="../Images/Seta-esquerda.png" class="prev" onclick="moveSlide(-1)">
             <div class="slider">
                 <div class="cafe">
                     <div class="texto-cafe">
-                        <h2>CAFÉ TAL</h2>
-                        <p>Café bom</p>
+                        <h2>Aurora da Serra</h2>
+                        <p>"Energia intensa com chocolate e caramelo."</p>
                     </div>
                     <div class="imagem-cafe">
                         <img id="imagem-slide" src="../Images/SACO-CAFE1.png">
@@ -58,8 +54,8 @@
                 </div>
                 <div class="cafe">
                     <div class="texto-cafe">
-                        <h2>CAFÉ TAL</h2>
-                        <p>Café bom</p>
+                        <h2>Raízes do Cerrado</h2>
+                        <p>"Robusto, aveludado e cheio de personalidade."</p>
                     </div>
                     <div class="imagem-cafe">
                         <img id="imagem-slide" src="../Images/SACO-CAFE4.png">
@@ -67,8 +63,8 @@
                 </div>
                 <div class="cafe">
                     <div class="texto-cafe">
-                        <h2>CAFÉ TAL</h2>
-                        <p>Café bom</p>
+                        <h2>Brisa do Vale</h2>
+                        <p>"Leveza doce e refrescante pra qualquer hora."</p>
                     </div>
                     <div class="imagem-cafe">
                         <img id="imagem-slide" src="../Images/SACO-CAFE3.png">

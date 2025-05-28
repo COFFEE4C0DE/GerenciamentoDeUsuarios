@@ -32,7 +32,7 @@ header{
 nav{
     background-color: #E2DAC0;
     width: 50%;
-    max-width: 700px;
+    max-width: 200px;
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
@@ -55,6 +55,7 @@ aside{
     display: flex;
     justify-content: space-between;
     padding: 50px;
+    margin-bottom: 50px;
 }
 
 aside > h2{
@@ -113,14 +114,9 @@ main{
 form {
     margin: auto;
     width: 90%;
-    background-color: #E2DAC0;
-    padding: 10px 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #E2DAC0;
-    border-radius: 0px 0px 15px 15px;
     margin-bottom: 1.5rem;
 }
 
@@ -236,6 +232,31 @@ footer{
     background-color: #5E3726;
     border-radius: 15px 15px 0 0;
     width: 215px;
-    transform: translate(-11px, -51px);
+    transform: translate(0px, -40px);
     position: absolute;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.adcEndereco:hover {
+    background-color: #9C6249;
+}
+
+.form-container {
+    transition: all 0.5s ease-out, opacity 0.3s ease;
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+}
+
+.form-container.show {
+    transition: all 0.5s ease-out, opacity 0.3s ease;
+    display: flex !important;
+    justify-content: space-around;
+    max-height: 215px !important;
+    opacity: 1 !important;
+    padding: 10px 10px;
+    background-color: #E2DAC0;
+    border-radius: 0px 0px 15px 15px;
 }

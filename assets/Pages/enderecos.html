@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../../css/endereco.css">
     <link rel="stylesheet" href="../../css/popup_end.css">
     <title>Endereços</title>
-    <script src="../../js/enderecos.js"></script>
 </head>
 <body>
     <div class="popup" id="IdPopup">
@@ -46,7 +45,6 @@
     <header>      
         <nav>
             <a href="./home.html">HOME</a>
-            <a href="./sobre.html">SOBRE</a>
         </nav>
         <aside>
             <h2>ENDEREÇOS</h2>
@@ -57,46 +55,47 @@
         <img class="botao-sair" src="../Images/sair-branco.png">
     </a>
     <form onsubmit="enviarDados(event)">
-        <div class="adcEndereco">
+        <div class="adcEndereco" id="toggleButton">
             <h2>ADICIONAR ENDEREÇO</h2>
         </div>
-        <div class="campos">
-            <div class="campo">
-                <label for="title">Titulo: </label>
-                <input type="text" id="title">
-            </div>
+        <div class="form-container" id="formContainer" style="display: none; overflow: hidden;">
+            <div class="campos">
+                <div class="campo">
+                    <label for="title">Titulo: </label>
+                    <input type="text" id="title">
+                </div>
 
-            <div class="campo">
-                <label for="cep">CEP: </label>
-                <input type="number" id="cep">
-            </div>
-        </div>
-        
-        <div class="campos">
-            <div class="campo">
-                <label for="adress">Endereço: </label>
-                <input type="text" id="address">
+                <div class="campo">
+                    <label for="cep">CEP: </label>
+                    <input type="number" id="cep">
+                </div>
             </div>
             
-            <div class="campo">
-                <label for="number">Número: </label>
-                <input type="number" id="number">
+            <div class="campos">
+                <div class="campo">
+                    <label for="adress">Endereço: </label>
+                    <input type="text" id="address">
+                </div>
+                
+                <div class="campo">
+                    <label for="number">Número: </label>
+                    <input type="number" id="number">
+                </div>
+            </div>
+            
+            <div class="campos">
+                <div class="campo">
+                    <label for="complement">Complemento: </label>
+                    <input type="text" id="complement">   
+                </div>
+                <div class="button">
+                    <input type="submit" value="Enviar">
+                </div>
             </div>
         </div>
-        
-        <div class="campos">
-            <div class="campo">
-                <label for="complement">Complemento: </label>
-                <input type="text" id="complement">   
-            </div>
-            <div class="button">
-                <input type="submit" value="Enviar">
-            </div>
-        </div>
-
     </form>
     <main id="enderecos"></main>
-
     <footer>&copy; COFFEE4C0DE - Todos os direitos reservados. </footer>
+    <script src="../../js/enderecos.js"></script>
 </body>
 </html>
