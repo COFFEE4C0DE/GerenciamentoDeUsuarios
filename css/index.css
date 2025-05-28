@@ -209,6 +209,8 @@ main {
 
 .third-sec-img img {
     width: 500px;
+    bottom: -79px;
+    position: relative;
 }
 
 .fourth-sec {
@@ -222,6 +224,8 @@ main {
 .fourth-sec-img img {
     width: 100%;
     max-width: 800px;
+    bottom: -67px;
+    position: relative;
 }
 
 .fourth-sec-txt {
@@ -277,14 +281,12 @@ main {
     height: 45vh;
     margin-bottom: 20px;
     gap: 90px;
-
+    font-size: 1.3rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
     color: #704024;
-
 }
 
 .menu-sec-cafes:hover{
