@@ -23,7 +23,7 @@ function posicionaEnderecos(enderecos) {
         div.classList.add('endereco');
         div.innerHTML = `
             <input type="hidden" value="${endereco.id}">
-            <button>EDITAR</button>
+            <button value='${endereco.id}' onClick='abrePopup(event)'>EDITAR</button>
             <button value='${endereco.id}' onClick='excluirEndereco(event)'>EXCLUIR</button>
             <div class="campos">
                 <div class="campo">
@@ -108,4 +108,51 @@ async function enviarDados(event){
     } else {
         alert('Endereço inválido.')
     }
+}
+
+function abrePopup(event) {
+    document.querySelector("#enviar").value = event.target.value;
+    document.querySelector('#IdPopup').style.display = 'flex';
+    
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+    });
+
+    document.querySelector('body').style.overflow = 'hidden';
+}   
+
+function fechaPopup() {
+    document.querySelector('#IdPopup').style.display = 'none';
+    document.querySelector('body').style.overflow = 'auto';
+} 
+
+async function atualizarDados(event){
+    event.preventDefault();
+    const url = 'https://go-wash-api.onrender.com/api/auth/address';
+    
+    let dadosEndereco =  {
+        title:document.querySelector('#title').value,
+        cep: document.querySelector('#cep').value,
+        address: document.querySelector('#end').value,
+        number: document.querySelector('#numero').value,
+        complement: document.querySelector('#complement').value
+    }
+
+    let resposta = await fetch(`${url}/${event.target.value}`, {
+        method: 'post',
+        headers: {
+            Authorization: `Bearer ${dadosUsuario.access_token}`,
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dadosEndereco)
+    })
+
+    if (resposta.ok) {
+        alert('Endereço alterado com sucesso!')
+        window.location.reload()
+     } else {
+        alert('Endereço inválido.')
+    }
+
 }

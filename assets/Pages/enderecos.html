@@ -5,10 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/endereco.css">
+    <link rel="stylesheet" href="../../css/popup_end.css">
     <title>Endereços</title>
     <script src="../../js/enderecos.js"></script>
 </head>
 <body>
+    <div class="popup" id="IdPopup">
+        <form id="enderecoForm" class="popupForm">            
+            <div class="campo">
+                <h3>Título:</h3>
+                <input id="title" class="barra" type="text" minlength="1" maxlength="200" required/>
+            </div>
+
+            <div class="campo">
+                <h3>Cep:</h3>
+                <input id="cep" class="barra" type="text" minlength="5" maxlength="200" required/>
+            </div>
+
+            <div class="campo">
+                <h3>Número:</h3>
+                <input id="numero" type="text" minlength="1" maxlength="200" required/>
+            </div>
+
+            <div class="campo">
+                <h3>Complemento:</h3>
+                <input id="complement" class="barra" type="text" maxlength="200"/>
+            </div>
+
+            <div class="campo">
+                <h3>Endereço:</h3>
+                <textarea id="end" minlength="1" maxlength="200" required > </textarea>
+            </div>
+
+            <div id="botao">
+                <button type="submit" id="enviar" onclick="atualizarDados(event)">ENVIAR</button>
+                <button type="button" id="cancelar" onclick="fechaPopup()">CANCELAR</button>
+            </div>
+        </form>    
+    </div>
     <header>      
         <nav>
             <a href="./home.html">HOME</a>
