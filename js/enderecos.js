@@ -28,31 +28,35 @@ function posicionaEnderecos(enderecos) {
             <div class="campos">
                 <div class="campo">
                     <h3>Título:</h3>
-                    <p>${endereco.title}</p>
+                    <p>${verificarNull(endereco.title)}</p>
                 </div>
                 <div class="campo">
                     <h3>Cep:</h3>
-                    <p>${endereco.cep}</p>
+                    <p>${verificarNull(endereco.cep)}</p>
                 </div>
             </div>
             <div class="campos">
                 <div class="campo">
                     <h3>Número:</h3>
-                    <p>${endereco.number}</p>
+                    <p>${verificarNull(endereco.number)}</p>
                 </div>
                 <div class="campo">
                     <h3>Complemento:</h3>
-                    <p>${endereco.complement}</p>
+                    <p>${verificarNull(endereco.complement)}</p>
                 </div>
             </div>
             <div class="campo">
                 <h3>Endereço:</h3>
-                <p>${endereco.address}</p>
+                <p>${verificarNull(endereco.address)}</p>
             </div>
         `;
         document.querySelector('#enderecos').appendChild(div);
     }
 };
+
+function verificarNull(valor){
+    return valor == null ? '' : valor;
+}
 
 async function excluirEndereco(event) {
     if (confirm('Tem certeza que deseja exlcluir esse endereço?')) {
@@ -86,12 +90,14 @@ listarEnderecos(url, dadosUsuario);
 async function enviarDados(event){
     event.preventDefault()        
     let endereco = {
-        title: document.querySelector('#title').value,
-        cep: document.querySelector('#cep').value,
-        address: document.querySelector('#address').value,
-        number: document.querySelector('#number').value,
-        complement: document.querySelector('#complement').value,
+        title: document.querySelector('#titleAdicionar').value,
+        cep: document.querySelector('#cepAdicionar').value,
+        address: document.querySelector('#endAdicionar').value,
+        number: document.querySelector('#numeroAdicionar').value,
+        complement: document.querySelector('#complementAdicionar').value
     }
+
+    console.log(endereco)
 
     let resposta = await fetch(url, {
         method: 'post',
@@ -107,6 +113,7 @@ async function enviarDados(event){
         window.location.reload()
     } else {
         alert('Endereço inválido.')
+        console.log(toString(resposta.errors))
     }
 }
 
