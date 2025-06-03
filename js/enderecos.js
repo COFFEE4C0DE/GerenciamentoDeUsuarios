@@ -54,10 +54,6 @@ function posicionaEnderecos(enderecos) {
     }
 };
 
-function verificarNull(valor){
-    return valor == null ? '' : valor;
-}
-
 async function excluirEndereco(event) {
     if (confirm('Tem certeza que deseja exlcluir esse endereço?')) {
         const url = 'https://go-wash-api.onrender.com/api/auth/address';
@@ -71,7 +67,7 @@ async function excluirEndereco(event) {
             let response = await resposta.json()
             if (response.data) {
                 alert('Endereço excluído com sucesso!')
-            }
+            } 
             window.location.reload()
         } else {
             alert(`Falha ao excluir endereço. ERROR: ${requisicao.data}`)
@@ -163,11 +159,3 @@ async function atualizarDados(event){
     }
 
 }
-
-const toggleButton = document.getElementById('toggleButton');
-const formContainer = document.getElementById('formContainer');   
-
-toggleButton.addEventListener('click', function() {
-    console.log(formContainer)
-    formContainer.classList.toggle('show');
-});
