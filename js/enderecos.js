@@ -28,26 +28,26 @@ function posicionaEnderecos(enderecos) {
             <div class="campos">
                 <div class="campo">
                     <h3>Título:</h3>
-                    <p>${verificarNull(endereco.title)}</p>
+                    <p>${endereco.title}</p>
                 </div>
                 <div class="campo">
                     <h3>Cep:</h3>
-                    <p>${verificarNull(endereco.cep)}</p>
+                    <p>${endereco.cep}</p>
                 </div>
             </div>
             <div class="campos">
                 <div class="campo">
                     <h3>Número:</h3>
-                    <p>${verificarNull(endereco.number)}</p>
+                    <p>${endereco.number}</p>
                 </div>
                 <div class="campo">
                     <h3>Complemento:</h3>
-                    <p>${verificarNull(endereco.complement)}</p>
+                    <p>${endereco.complement}</p>
                 </div>
             </div>
             <div class="campo">
                 <h3>Endereço:</h3>
-                <p>${verificarNull(endereco.address)}</p>
+                <p>${endereco.address}</p>
             </div>
         `;
         document.querySelector('#enderecos').appendChild(div);
