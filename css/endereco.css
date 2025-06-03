@@ -14,7 +14,7 @@
 }
 
 body{
-    height: 100vh;
+    min-height: 100vh;
     background-color: #9C6249;
     background-image: url(../assets/Images/FundoAlmiscarado.png);
     background-position: top left;
