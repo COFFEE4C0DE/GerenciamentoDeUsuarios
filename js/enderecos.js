@@ -21,6 +21,7 @@ function posicionaEnderecos(enderecos) {
     for (let endereco of enderecos) {
         let div = document.createElement('div');
         div.classList.add('endereco');
+        div.setAttribute('id', `ID${endereco.id}`);
         div.innerHTML = `
             <input type="hidden" value="${endereco.id}">
             <button value='${endereco.id}' onClick='abrePopup(event)'>EDITAR</button>
@@ -114,8 +115,15 @@ async function enviarDados(event){
 }
 
 function abrePopup(event) {
+    let paragrafos = document.querySelectorAll(`#ID${event.target.value} .campo > p`)
     document.querySelector("#enviar").value = event.target.value;
     document.querySelector('#IdPopup').style.display = 'flex';
+
+    document.querySelector('#title').value = paragrafos[0].innerText;
+    document.querySelector('#cep').value = paragrafos[1].innerText;
+    document.querySelector('#end').value = paragrafos[4].innerText;
+    document.querySelector('#numero').value = paragrafos[2].innerText;
+    document.querySelector('#complement').value = paragrafos[3].innerText;
     
     window.scrollTo({
         top: 0,
